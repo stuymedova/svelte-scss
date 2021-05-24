@@ -4,6 +4,9 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import scss from 'rollup-plugin-scss';
+import postcss from 'postcss';
+import autoprefixer from 'autoprefixer';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -42,6 +45,13 @@ export default {
 				// enable run-time checks when not in production
 				dev: !production
 			}
+		}),
+		scss({
+			output: true,
+			outputStyle: 'compressed',
+			sourceMap: !production,
+			prefix: `@import "./src/styles/_variables.scss";`,
+			processor: () => postcss([autoprefixer()]),
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
