@@ -1,4 +1,4 @@
-import "./styles/main.scss";
+import './styles/main.scss';
 import App from './App.svelte';
 
 const app = new App({
