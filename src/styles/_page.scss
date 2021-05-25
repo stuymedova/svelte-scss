@@ -1,3 +1,7 @@
+header h1 {
+  line-height: 1.125;
+}
+
 header, main .grid-container {
   margin: 3rem 2rem;
 }
@@ -6,4 +10,10 @@ header, main .grid-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
