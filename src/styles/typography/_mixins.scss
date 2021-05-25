@@ -1,0 +1,17 @@
+@mixin font-light {
+  font-family: 'IBM Plex Sans Light', 'Helvetica Neue', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin font {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-semibold {
+  font-family: 'IBM Plex Sans SemiBold', 'Helvetica Neue', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}

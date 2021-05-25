@@ -1,24 +1,12 @@
-main {
-  text-align: center;
-  padding: 1em;
-  max-width: 240px;
-  margin: 0 auto;
-  font-family: $font-family;
-}
+@import 'reset';
 
-h1 {
-  color: $primary-color;
-  text-transform: uppercase;
-  font-size: 4em;
-  font-weight: 100;
-}
+@import 'typography/font-face';
+@import 'typography/mixins';
+@import 'typography/type-scale';
+@import 'typography/typography';
 
-a {
-  color: $secondary-color;
-}
+@import 'page';
 
-@media (min-width: 640px) {
-  main {
-    max-width: none;
-  }
-}
+@import 'components/variables';
+@import 'components/mixins';
+@import 'components/button';

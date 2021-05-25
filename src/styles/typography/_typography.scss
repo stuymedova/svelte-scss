@@ -1,0 +1,35 @@
+body {
+  @include font-light();
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  line-height: 70%;
+  padding-bottom: 1.25rem;
+}
+
+h1 {
+  @include type-scale(8);
+}
+h2 {
+  @include type-scale(7);
+}
+h3 {
+  @include type-scale(6);
+}
+h4 {
+  @include type-scale(5);
+}
+h5 {
+  @include type-scale(4);
+}
+h6, p {
+  @include type-scale(3);
+}
+button {
+  @include type-scale(2);
+}

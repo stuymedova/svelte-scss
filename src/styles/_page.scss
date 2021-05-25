@@ -1,0 +1,9 @@
+header, main .grid-container {
+  margin: 3rem 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+}

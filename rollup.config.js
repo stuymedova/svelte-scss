@@ -49,9 +49,8 @@ export default {
 		scss({
 			output: true,
 			outputStyle: 'compressed',
-			sourceMap: !production,
-			prefix: `@import "./src/styles/_variables.scss";`,
 			processor: () => postcss([autoprefixer()]),
+			watch: 'src/styles'
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance

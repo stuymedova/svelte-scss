@@ -1,0 +1,11 @@
+@mixin button-theme(
+  $color,
+  $bg-color,
+  $border-color
+) {
+  color: $color;
+  background-color: $bg-color;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $border-color;
+}

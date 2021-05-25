@@ -1,0 +1,40 @@
+// Source: https://github.com/carbon-design-system/carbon/blob/48deedf2fb7a343594ed844d6c852c9108a3eb53/packages/type/scss/modules/_scale.scss. Has been modified.
+
+// Convert a given px unit to a rem unit
+$base-font-size: 16px !default;
+
+@function rem($px) {
+  @if unit($px) != 'px' {
+    @warn "Expected argument $px to be of type `px`, instead received: `#{unit($px)}`";
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+
+// Compute type size for a given type scale step
+@function get-type-size($step) {
+  @if $step == 1 {
+    @return 12px;
+  }
+  // Yn = Yn-1 + {INT[(n-2)/4] + 1} * 2
+  @return get-type-size($step - 1) + (floor(($step - 2) / 4) + 1) * 2;
+}
+
+// Type scale follows a custom formula for determining each step size and supports sizes from 12px to 92px
+$type-scale: ();
+@for $i from 1 through 23 {
+  $type-scale: append(
+    $type-scale,
+    rem(get-type-size($i))
+  );
+}
+
+// Get the value of a specific step in the type scale
+@function type-scale($step) {
+  @return nth($type-scale, $step);
+}
+
+// Set the font-size value of a selector with the value at the given `$step`
+@mixin type-scale($step) {
+  font-size: type-scale($step);
+}
