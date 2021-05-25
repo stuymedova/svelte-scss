@@ -49,6 +49,7 @@ export default {
 		scss({
 			output: true,
 			outputStyle: 'compressed',
+			sass: require('sass'),
 			processor: () => postcss([autoprefixer()]),
 			watch: 'src/styles'
 		}),
