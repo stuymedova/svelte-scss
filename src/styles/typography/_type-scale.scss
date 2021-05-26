@@ -1,5 +1,7 @@
 // Source: https://github.com/carbon-design-system/carbon/blob/48deedf2fb7a343594ed844d6c852c9108a3eb53/packages/type/scss/modules/_scale.scss. Has been modified.
 
+@use "sass:math";
+
 // Convert a given px unit to a rem unit
 $base-font-size: 16px !default;
 
@@ -7,7 +9,7 @@ $base-font-size: 16px !default;
   @if unit($px) != 'px' {
     @warn "Expected argument $px to be of type `px`, instead received: `#{unit($px)}`";
   }
-  @return ($px / $base-font-size) * 1rem;
+  @return math.div($px, $base-font-size) * 1rem;
 }
 
 
@@ -17,7 +19,7 @@ $base-font-size: 16px !default;
     @return 12px;
   }
   // Yn = Yn-1 + {INT[(n-2)/4] + 1} * 2
-  @return get-type-size($step - 1) + (floor(($step - 2) / 4) + 1) * 2;
+  @return get-type-size($step - 1) + (floor(math.div($step - 2, 4)) + 1) * 2;
 }
 
 // Type scale follows a custom formula for determining each step size and supports sizes from 12px to 92px
