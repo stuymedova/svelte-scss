@@ -1,5 +1,5 @@
 body {
-  @include font-light();
+  @include font-light;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
