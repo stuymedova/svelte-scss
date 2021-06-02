@@ -35,6 +35,9 @@ Run in terminal:
 npm i
 npm run dev/build
 ```
-<br>
+
+## Result
+
+<img width="1440" alt="svelte-sass-postcss" src="https://user-images.githubusercontent.com/53351370/120441917-c05c1f80-c38d-11eb-97e1-aaa97b988a79.png">
 
 Utilizes [Carbon Design System](https://github.com/carbon-design-system/carbon) licensed under the Apache 2.0 License.
