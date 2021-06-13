@@ -28,7 +28,7 @@ SCSS files are located in `src/styles`.
         └── main.scss
 ```
 
-## Prerequesites
+## Prerequisites
 
 [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/)
 
