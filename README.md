@@ -28,16 +28,21 @@ SCSS files are located in `src/styles`.
         └── main.scss
 ```
 
+## Prerequesites
+
+[Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/)
+
 ## Setup
 
 Run in terminal:
 ```
-npm i
-npm run dev/build
+npm install
+npm run dev
+npm run build
 ```
 
 ## Result
 
-<img width="1440" alt="svelte-sass-postcss" src="https://user-images.githubusercontent.com/53351370/120441917-c05c1f80-c38d-11eb-97e1-aaa97b988a79.png">
+<img width="1552" alt="svelte-sass-postcss" src="https://user-images.githubusercontent.com/53351370/121812850-1ffdd900-cc72-11eb-81ac-774842b77ec0.png">
 
 Utilizes [Carbon Design System](https://github.com/carbon-design-system/carbon) licensed under the Apache 2.0 License.
