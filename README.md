@@ -1,8 +1,6 @@
 # Svelte + Sass and PostCSS
 
-Svelte template with Sass SCSS and PostCSS Autoprefixer configured.
-
-This setup uses `rollup-plugin-scss` to preprocess `.scss` files. To preprocess SCSS inside Svelte `<style>` tags, set up a preprocessor such as [Svelte Preprocess](https://github.com/sveltejs/svelte-preprocess). For more information, refer [Svelte Preprocess docs](https://github.com/sveltejs/svelte-preprocess/tree/main/docs).
+Svelte app with Sass SCSS and PostCSS Autoprefixer configured.
 
 ## Overview
 
