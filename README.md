@@ -4,8 +4,6 @@ Svelte app with Sass SCSS and PostCSS Autoprefixer configured.
 
 ## Overview
 
-SCSS files are located in `src/styles`.
-
 ```
 .
 └── src
